@@ -1,0 +1,6 @@
+flask
+gunicorn
+pyodbc
+azure-identity
+openai
+python-dotenv
