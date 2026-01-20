@@ -112,7 +112,8 @@ def generate_sql(question, schema_info, company_name):
 
         -if talking about a specific year dont use betweem just use this- Use YEAR(a.Date) ONLY when a specific year is explicitly mentioned (e.g. "year 2025").
         
-        Treat entries as:
+        for the billable amount or hours take care of this:
+            take type = 'TimeEntry' and
             Billable when non_billable = false
             Non-billable when non_billable = true
 
