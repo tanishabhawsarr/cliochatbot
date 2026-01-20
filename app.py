@@ -111,7 +111,10 @@ def generate_sql(question, schema_info, company_name):
             a.Date BETWEEN DATEFROMPARTS(YEAR(GETDATE()), 1, 1) AND CAST(GETDATE() AS DATE)
 
         -if talking about a specific year dont use betweem just use this- Use YEAR(a.Date) ONLY when a specific year is explicitly mentioned (e.g. "year 2025").
-
+        
+        Treat entries as:
+            Billable when non_billable = false
+            Non-billable when non_billable = true
 
         AGGREGATION RULES:
         - When using SUM or COUNT with non-aggregated columns, ALWAYS use GROUP BY.
