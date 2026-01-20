@@ -107,10 +107,10 @@ def generate_sql(question, schema_info, company_name):
         - If the user asks for "current year":
         - ALWAYS calculate dates inside SQL.
         - NEVER use placeholders like <today_date>.
-        - Use:
+        - if talking about current year,Use:
             a.Date BETWEEN DATEFROMPARTS(YEAR(GETDATE()), 1, 1) AND CAST(GETDATE() AS DATE)
 
-        - Use YEAR(a.Date) ONLY when a specific year is explicitly mentioned (e.g. "year 2025").
+        -if talking about a specific year dont use betweem just use this- Use YEAR(a.Date) ONLY when a specific year is explicitly mentioned (e.g. "year 2025").
 
 
         AGGREGATION RULES:
